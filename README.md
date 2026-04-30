@@ -1,6 +1,6 @@
-# Artifact Evaluation (Theory): High-Efficiency Natively Branchless Primality Testing against Structural Leakage
+# Aligning the Trace: Structurally Constant-Time Primality Testing against Misalignment Attacks
 
-This repository contains the mathematical and theoretical artifact for our paper. It provides a comprehensive **SageMath notebook** designed to empirically verify the theorems, statistical simulations, and optimization algorithms underlying our natively branchless primality tests.
+This repository contains the mathematical and theoretical artifact for our paper. It provides a comprehensive **SageMath notebook** designed to empirically verify the theorems, statistical simulations, and optimization algorithms underlying our primality tests.
 
 > **Note:** The C-language implementations, OpenSSL benchmarks, and side-channel leakage assessments (dudect) are hosted in a separate repository. This repository is dedicated strictly to theoretical verification.
 
@@ -23,7 +23,7 @@ The core of this artifact is the `PrimalityTest-Vtest.ipynb` notebook, which is 
 * **Method:** Simulates high-speed prime generation to track the search depth required to find a valid quadratic non-residue $D$ across a massive dataset of prime candidates. It outputs the exact statistical distribution (raw counts and percentages) to validate our fixed-iteration threshold.
 
 ### C. Optimal Parameter Selection via Integer Programming
-* **Objective:** Provides a direct implementation of the Bivariate Integer Linear Programming (ILP) solvers (**Algorithms 10 and 11**).
+* **Objective:** Provides a direct implementation of the Bivariate Integer Linear Programming (ILP) solvers (**Algorithms OptParam**).
 * **Method:** Calculates the optimal number of computationally intensive iterations ($I_{CSL}$ or $I_{SS}$) and trace-based iterations ($I_{CV}$) required to minimize the total arithmetic cost while strictly satisfying a target security level (e.g., $\kappa = 128, 192, 256$).
 
 ## 3. Execution Instructions
